@@ -3,16 +3,20 @@
   "version": "1.0.0",
   "description": "React App Store",
   "main": "index.js",
-  "scripts": {                                                                  
-    "test": "echo \"Error: no test specified\" && exit 1",                      
-    "start": "cd server && nodemon server.js",                                  
-    "dev": "concurrently \"npm run start\" \"cd storeapp && npm start\"",         
-    "postinstall": "(cd storeapp && npm install); (cd server && npm install);"    
-},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd server && nodemon server.js",
+    "dev": "concurrently \"npm run start\" \"cd storeapp && npm start\"",
+    "postinstall": "(cd storeapp && npm install); (cd server && npm install);"
+  },
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^5.1.0",
     "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "react-bootstrap": "^1.0.0"
   }
 }

@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import Product from './Product';
-import ProductList from './ProductList'
 
 export default class ProductList extends Component {
     render() {
         return (
             <div>
-            <ProductList>
+            <Product>
+
+                    {/* You can use a for loop .map  for many products*/}
                 
-</ProductList>
+</Product>
         </div>
         )
     }
