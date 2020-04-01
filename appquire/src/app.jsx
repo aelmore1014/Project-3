@@ -6,8 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import CartProvider from "./components/cart/context";
-import ProductsPage from "./pages/products";
-import ViewCartPage from "./pages/view-cart";
+// import ProductsPage from "./pages/products";
+// import ViewCartPage from "./pages/view-cart";
 import Store from "./components/store"
 import Navbar from "./components/navbar"
 
@@ -17,10 +17,10 @@ function App() {
     <CartProvider>
       <Navbar />
       <Store />
-      <Switch>
-        <Route path="/products" component={ProductsPage} />
+      {/* <Switch>
+        <Route exact path="/products" component={ProductsPage} />
         <Route path="/view-cart" component={ViewCartPage} />
-      </Switch>
+      </Switch> */}
     </CartProvider>
   </React.Fragment>
 );
