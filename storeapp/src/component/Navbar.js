@@ -9,20 +9,20 @@ import logo from '../logo.svg';
 export default class Navbar extends Component {
     render() {
         return (
-        <nav className="navbar navbar-expand-sm bg-primary navbar-dark px-sm-5">
+        <nav className="navbar navbar-expand-sm bg-light navbar-dark px-sm-5">
             <Link to="/">
-                <img src={logo} alt="store" className="navbar-brand" />
+                <img src={logo} alt="Appquire" className="navbar-brand text-dark" />
             </Link>
             
             <ul className="navbar-nav align-items-center">
                 <li className="nav-item ml-5" >
-                    <Link to="/" className="nav-link">
-                        products
+                    <Link to="/" className="nav-link text-dark">
+                        Products
                         </Link>
                     </li>
             </ul>
             <Link to="/cart" className="ml-auto">
-                <button>
+                <button className="btn btn-primary">
                     <i className="fas fa-cart-plus"></i>
                     Cart
                 </button>

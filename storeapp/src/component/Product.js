@@ -99,8 +99,6 @@ export default class Product extends Component {
     </Card.Body>
   </Card>
 </CardColumns>
-
-        
         
         )
     }
