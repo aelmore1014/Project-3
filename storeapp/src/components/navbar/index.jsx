@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../logo.svg';
+// import logo from '../logo.svg';
 // import styled from 'style-component'
 
 
@@ -11,17 +11,17 @@ export default class Navbar extends Component {
         return (
         <nav className="navbar navbar-expand-sm bg-light navbar-dark px-sm-5">
             <Link to="/">
-                <img src={logo} alt="Appquire" className="navbar-brand text-dark" />
+                <img alt="Appquire" className="navbar-brand text-dark" />
             </Link>
             
             <ul className="navbar-nav align-items-center">
                 <li className="nav-item ml-5" >
-                    <Link to="/" className="nav-link text-dark">
+                    <Link to="/products" className="nav-link text-dark">
                         Products
                         </Link>
                     </li>
             </ul>
-            <Link to="/cart" className="ml-auto">
+            <Link to="/view-cart" className="ml-auto">
                 <button className="btn btn-primary">
                     <i className="fas fa-cart-plus"></i>
                     Cart
