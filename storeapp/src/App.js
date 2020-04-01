@@ -10,6 +10,7 @@ import Product from './component/Product';
 import Details from './component/Details';
 import ProductList from './component/ProductList';
 import Cart from './component/Cart';
+import Filesupload from './component/Filesupload';
 
 
 
@@ -21,7 +22,9 @@ function App() {
       <Switch>
        <Route exact path="/" component={ProductList} />
        <Route path="/details" component={Details} />
-       <Route path="/cart" component={Cart} />
+        <Route path="/cart" component={Cart} />
+        <Route path="/filesupload" component={Filesupload} />
+
               {/* <Route component={ProductList}> */}
 
       </Switch>
