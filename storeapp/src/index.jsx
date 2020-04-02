@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './app';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import ProductsPage from "./pages/products";
 import ViewCartPage from "./pages/view-cart";
