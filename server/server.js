@@ -4,16 +4,26 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session');
 const mongoose = require('mongoose');
+<<<<<<< HEAD
 const App = require('./database/index');
+=======
+
+const multer = require('multer')
+
+mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true });
+>>>>>>> master
 
 
 const multer = require('multer')
 
+<<<<<<< HEAD
 mongoose.connect('mongodb://localhost/Appquire', { useNewUrlParser: true });
 
 
 const db = mongoose.connection;
 
+=======
+>>>>>>> master
 
 
 
@@ -41,6 +51,26 @@ const storage = multer.diskStorage({
   filename: function (req, file, cb) {
     cb(null, Date.now() + '-' +file.originalname )
   }
+<<<<<<< HEAD
+=======
+
+})
+const upload = multer({ storage: storage }).single('file')
+
+app.post('/upload',function(req, res) {
+     
+    upload(req, res, function (err) {
+           if (err instanceof multer.MulterError) {
+               return res.status(500).json(err)
+           } else if (err) {
+               return res.status(500).json(err)
+           }
+      return res.status(200).send(req.file)
+
+    })
+
+});
+>>>>>>> master
 
 })
 const upload = multer({ storage: storage }).single('file')
