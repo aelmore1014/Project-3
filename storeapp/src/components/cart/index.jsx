@@ -1,4 +1,5 @@
 // THIS PAGE HOLDS INFORMATION AND MAPPING FOR THE CART 
+// CAN PLUG MORE INTO OR CHANGE CART STYLE HERE
 
 import React, { useState, useEffect, useContext } from "react"
 import { CartContext } from "./context"
@@ -29,8 +30,10 @@ export default function Cart({ stripeToken }) {
         quantity: item.quantity,
         sku: item.sku
       })),
-      successUrl: "https://your-website.com/success",
-      cancelUrl: "https://your-website.com/canceled"
+      successUrl: "http://localhost:3000/",
+      cancelUrl: "http://localhost:3000/"
+      // successUrl: "https://your-website.com/success",
+      // cancelUrl: "https://your-website.com/canceled"
     })
   }
 
