@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import CartContext from "../cart/context";
 // import logo from '../logo.svg';
 // import styled from 'style-component'
 
 
-
-
 export default class Navbar extends Component {
     render() {
+    // const cartCtx = useContext(CartContext);
+    // const numItems = cartCtx.items.count;
         return (
         <nav className="navbar navbar-expand-sm bg-light navbar-dark px-sm-5">
             <Link to="/">
@@ -24,7 +25,8 @@ export default class Navbar extends Component {
             <Link to="/view-cart" className="ml-auto">
                 <button className="btn btn-primary">
                     <i className="fas fa-cart-plus"></i>
-                    Cart
+                    Cart 
+                    {/* ({numItems}) */}
                 </button>
             </Link>
             </nav>

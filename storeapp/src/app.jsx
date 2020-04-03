@@ -10,17 +10,22 @@ import CartProvider from "./components/cart/context";
 // import ViewCartPage from "./pages/view-cart";
 import Store from "./components/store"
 import Navbar from "./components/navbar"
+import Layout from "./components/layout";
 
+// Sets up pages for App
 function App() {
     return (
   <React.Fragment>
     <CartProvider>
       <Navbar />
+      <Layout>
       <Store />
-      {/* <Switch>
+      {/* OLD SWITCH
+        <Switch>
         <Route exact path="/products" component={ProductsPage} />
         <Route path="/view-cart" component={ViewCartPage} />
       </Switch> */}
+      </Layout>
     </CartProvider>
   </React.Fragment>
 );

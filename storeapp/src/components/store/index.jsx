@@ -1,7 +1,7 @@
-import React, { useContext } from "react"
-import products from "../../data/products"
-import Cart from "../cart"
-import { CartContext } from "../cart/context"
+import React, { useContext } from "react";
+import products from "../../data/products";
+import { CartContext } from "../cart/context";
+import Cart from "../cart";
 
 export default function Store() {
   const cartCtx = useContext(CartContext)
@@ -24,7 +24,9 @@ export default function Store() {
           </div>
         </div>
       ))}
-      <Cart stripeToken="pk_test_yNFG8EE1RMXpBQmCyWRlGDx400CddyVwyS" />
+      {/* USING TO MAKE SURE THE CART IS WORKING/UPDATING; 
+      WILL BE COMMENTED OUT WHEN CART IS RENDERING ON CART PAGE */}
+       <Cart stripeToken="pk_test_yNFG8EE1RMXpBQmCyWRlGDx400CddyVwyS" />
     </div>
   )
 }

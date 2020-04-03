@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './app';
 import './App.css';
+import './style.css';
 import ProductsPage from "./pages/products";
 import ViewCartPage from "./pages/view-cart";
 import Details from './components/Details';
@@ -11,11 +12,13 @@ import Filesupload from './components/Filesupload';
 
 import CartProvider from "./components/cart/context";
 
-
+// Renders paths for pages
 ReactDOM.render(
   <BrowserRouter>
+   {/* wraps other components and gives them access to the router */}
     <CartProvider>
       <Switch>
+    {/* exact path keeps pages rendering on separate pages instead of the same page */}
       <Route exact path="/" component={App} />
       <Route exact path="/products" component={ProductsPage} />
       <Route exact path="/view-cart" component={ViewCartPage} />
