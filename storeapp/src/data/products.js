@@ -1,19 +1,25 @@
-const products = [
+// THIS PAGE HOLDS THE ITEMS INFORMATION
+
+// QUANTITY STILL DOES NOT STOP THE ITEMS FROM INCREMENTING
+const items = [
   {
-    sku: "sku_G3G6Y94PnHPuxR",
+    sku: "sku_H1hfpdHC71b5im",
+    price: 1000,
+    quantity: 1,
+    name: "Eat-Da-Burger App"
+  },
+  {
+    sku: "sku_H1hddAVv9Wv51m",
     price: 2000,
-    name: "App Placeholder 1"
+    quantity: 1,
+    name: "Daily Planner App"
   },
   {
-    sku: "sku_G3G5MorYlndH53",
+    sku: "sku_H1hgjh7ZDNCT38",
     price: 4000,
-    name: "App Placeholder 2"
-  },
-  {
-    sku: "sku_G3G3ezLA8VaR1P",
-    price: 12000,
-    name: "App Placeholder 3"
+    quantity: 1,
+    name: "Whimsical Weather App"
   }
 ]
 
-export default products
+export default items
