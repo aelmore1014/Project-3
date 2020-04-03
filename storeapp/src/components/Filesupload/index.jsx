@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Navbar from '../navbar';
 
 export default class Filesupload extends Component {
 
@@ -35,6 +36,8 @@ export default class Filesupload extends Component {
 
     render() {
         return (
+          <div>
+          <Navbar />
             <div>
     
                 <input type="file" name="file" onChange={this.onChangeHandler} />
@@ -42,7 +45,7 @@ export default class Filesupload extends Component {
 
 
                      
-
+        </div>
         </div>
         )
     }

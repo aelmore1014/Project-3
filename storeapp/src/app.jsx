@@ -8,9 +8,10 @@ import './App.css';
 import CartProvider from "./components/cart/context";
 // import ProductsPage from "./pages/products";
 // import ViewCartPage from "./pages/view-cart";
-import Store from "./components/store"
+// import Store from "./components/store"
 import Navbar from "./components/navbar"
 import Layout from "./components/layout";
+import MainPage from "./pages/mainpage";
 
 // Sets up pages for App
 function App() {
@@ -19,7 +20,7 @@ function App() {
     <CartProvider>
       <Navbar />
       <Layout>
-      <Store />
+      <MainPage />
       {/* OLD SWITCH
         <Switch>
         <Route exact path="/products" component={ProductsPage} />

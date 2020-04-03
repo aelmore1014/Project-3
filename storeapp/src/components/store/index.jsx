@@ -1,4 +1,6 @@
 // THIS PAGE HOLDS INFORMATION AND MAPPING FOR THE STORE
+// RIGHT NOW THIS IS ONLY BEING SENT FULLY TO THE VIEW-CART 
+// PAGE FOR USE
 
 import React, { useContext } from "react";
 import items from "../../data/products";
@@ -35,7 +37,7 @@ export default function Store() {
       ))}
       {/* USING TO MAKE SURE THE CART IS WORKING/UPDATING; 
       WILL BE COMMENTED OUT WHEN CART IS RENDERING ON CART PAGE */}
-       <Cart stripeToken="pk_test_yNFG8EE1RMXpBQmCyWRlGDx400CddyVwyS" />
+       <Cart stripeToken="pk_test_UrKGN5qjRXnN7yc9V0nwvBN300CnG4jUMU" />
     </div>
   )
 }
