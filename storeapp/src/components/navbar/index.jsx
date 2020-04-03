@@ -23,7 +23,7 @@ export default class Navbar extends Component {
             <Link to="/" className="nav-link text-dark">
                 About Our Store
                 </Link>
-            <Link to="/products" className="nav-link text-dark">
+            <Link to="/view-cart" className="nav-link text-dark">
                 Apps For Sale
                 </Link>
             {/* </li>
@@ -34,13 +34,7 @@ export default class Navbar extends Component {
                     Upload App
                 </button>
             </Link>
-            <Link to="/view-cart" className="ml">
-                <button className="btn btn-primary">
-                    <i className="fas fa-cart-plus"></i>
-                    Buy Now 
-                    {/* ({numItems}) */}
-                </button>
-            </Link>
+            
             </nav>
         )
     }
