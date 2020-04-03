@@ -1,14 +1,20 @@
+// THIS PAGE HOLDS INFORMATION AND MAPPING FOR THE CART 
+
 import React, { useState, useEffect, useContext } from "react"
 import { CartContext } from "./context"
+// import images from "../../../public/images"
 
+// SETS FORMAT FOR PRICE
 function formatPrice(price) {
   return `$${(price * 0.01).toFixed(2)}`
 }
 
+// ADDS UP QUANTITY AND PRICE FOR TOTAL PRICE
 function totalPrice(items) {
   return items.reduce((acc, item) => acc + item.quantity * item.price, 0.0)
 }
 
+// EXPORTS CART WITH A STRIPE TOKEN
 export default function Cart({ stripeToken }) {
   const [stripe, setStripe] = useState(null)
   const ctx = useContext(CartContext)
@@ -19,7 +25,7 @@ export default function Cart({ stripeToken }) {
 
   function checkout() {
     stripe.redirectToCheckout({
-      products: ctx.items.map(item => ({
+      items: ctx.items.map(item => ({
         quantity: item.quantity,
         sku: item.sku
       })),
@@ -28,6 +34,7 @@ export default function Cart({ stripeToken }) {
     })
   }
 
+// CAN USE THIS AND STORE TO MAP A DETAILS SECTION IF NEEDED
   return (
     <div>
       <table>
@@ -35,7 +42,7 @@ export default function Cart({ stripeToken }) {
           <tr>
             <th>Name</th>
             <th>Image</th>
-            <th>Quanity</th>
+            <th>Quantity</th>
             <th>Price</th>
           </tr>
         </thead>
@@ -46,12 +53,12 @@ export default function Cart({ stripeToken }) {
               <td>{item.name}</td>
               <td>
                 <img
-                  src={`/images/${item.sku}.jpg`}
+                  src={`/images/${item.sku}.png`}
                   alt={item.name}
                   width={50}
                 />
               </td>
-              <td>{item.quantity}</td>
+              <td>{(item.quantity)}</td>
               <td>{formatPrice(item.price)}</td>
             </tr>
           ))}
