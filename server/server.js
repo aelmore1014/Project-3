@@ -4,13 +4,26 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session');
 const mongoose = require('mongoose');
+<<<<<<< HEAD
+const App = require('./database/index');
+=======
 
 const multer = require('multer')
 
 mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true });
+>>>>>>> master
 
 
+const multer = require('multer')
 
+<<<<<<< HEAD
+mongoose.connect('mongodb://localhost/Appquire', { useNewUrlParser: true });
+
+
+const db = mongoose.connection;
+
+=======
+>>>>>>> master
 
 
 
@@ -23,6 +36,7 @@ const app = express();
 
 // app.set("views", _dirmane + "/views")
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json())
 app.use(cookieParser());
 app.use(cookieSession({ secret: "hello" }));
 app.use(cors());
@@ -37,6 +51,26 @@ const storage = multer.diskStorage({
   filename: function (req, file, cb) {
     cb(null, Date.now() + '-' +file.originalname )
   }
+<<<<<<< HEAD
+=======
+
+})
+const upload = multer({ storage: storage }).single('file')
+
+app.post('/upload',function(req, res) {
+     
+    upload(req, res, function (err) {
+           if (err instanceof multer.MulterError) {
+               return res.status(500).json(err)
+           } else if (err) {
+               return res.status(500).json(err)
+           }
+      return res.status(200).send(req.file)
+
+    })
+
+});
+>>>>>>> master
 
 })
 const upload = multer({ storage: storage }).single('file')
@@ -55,45 +89,26 @@ app.post('/upload',function(req, res) {
 
 });
 
+app.post('/saveapp', function(req, res) {
+    console.log(req.body)
+    // App.create(req.body)
+    //     .then(function (data) {
+    //     res.json(data)
+    //     })
+         var fluffy = new App({ name: req.body.name });
+        // fluffy.speak(); // "Meow name is fluffy"
+        
+        fluffy.save(function (err, fluffy) {
+            if (err) return console.error(err);
+            res.json(fluffy)
+        });
+})
+
 app.listen(port, () => {
-    var db = mongoose.connection;
     db.on('error', console.error.bind(console, 'connection error:'));
     db.once('open', function () {
 
-        var kittySchema = new mongoose.Schema({
-            name: String
-        });
-
-        kittySchema.methods.speak = function () {
-            var greeting = this.name
-                ? "Meow name is " + this.name
-                : "I don't have a name";
-            console.log(greeting);
-        }
-
-        var Kitten = mongoose.model('Kitten', kittySchema);
-
-        var silence = new Kitten({ name: 'Silence' });
-        console.log(silence.name); // 'Silence'
-
-        var fluffy = new Kitten({ name: 'fluffy' });
-        fluffy.speak(); // "Meow name is fluffy"
-
-        fluffy.save(function (err, fluffy) {
-            if (err) return console.error(err);
-            fluffy.speak();
-        });
-        Kitten.find(function (err, kittens) {
-            if (err) return console.error(err);
-            console.log(kittens);
-        })
-
-
-
-
-
-
-
+    
     });
 
 
