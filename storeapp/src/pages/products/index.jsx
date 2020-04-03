@@ -30,14 +30,16 @@ export default function ProductsPage() {
               width={50}
             />
           </div>
-          <div style={{ fontSize: '30px' }}>{item.name}</div>
-          <div>{item.description}</div>
-          <div>{formatPrice(item.price)}</div>
+          <div style={{ fontSize: '30px', textAlign: 'center' }}>{item.name}</div>
+          <div style={{ textAlign: 'center' }}>{item.description}</div>
+          <div style={{ textAlign: 'center' }} class="text-success">{formatPrice(item.price)}</div>
           <div>
           {/* NOT EXACTLY SURE WHAT TO PUT HERE ONCLICK */}
-            <button type="button" class="btn btn-dark" onClick={() => history.push('/view-cart')}>
-              BUY NOW!
+          <div style={{ textAlign: 'center' }} >
+            <button  type="button" class="btn btn-dark" onClick={() => history.push('/view-cart')}>
+             Add to Cart
             </button>
+            </div>
           </div>
         </div>
       ))}
