@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Router, BrowserRouter, Switch, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './app';
 import './App.css';
@@ -9,12 +9,13 @@ import ProductsPage from "./pages/products";
 import ViewCartPage from "./pages/view-cart";
 import Details from './components/Details';
 import Filesupload from './components/Filesupload';
+import history from "./history";
 
 import CartProvider from "./components/cart/context";
 
 // Renders paths for pages
 ReactDOM.render(
-  <BrowserRouter>
+  <Router history={history}>
    {/* wraps other components and gives them access to the router */}
     <CartProvider>
       <Switch>
@@ -26,7 +27,7 @@ ReactDOM.render(
       <Route exact path="/details" component={Details} />
       </Switch>
     </CartProvider>
-  </BrowserRouter>,
+  </Router>,
   document.getElementById("root")
 );
 

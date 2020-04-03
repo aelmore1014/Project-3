@@ -3,6 +3,9 @@
 import React from "react";
 import Navbar from "../../components/navbar";
 import Layout from "../../components/layout";
+// import { BrowserRouter, Switch, Route } from "react-router-dom";
+// import ProductsPage from "./pages/products";
+import history from "../../history";
 
 import items from "../../data/products";
 
@@ -29,6 +32,12 @@ export default function ProductsPage() {
           <div>{item.name}</div>
           <div>{item.description}</div>
           <div>{formatPrice(item.price)}</div>
+          <div>
+          {/* NOT EXACTLY SURE WHAT TO PUT HERE ONCLICK */}
+            <button onClick={() => history.push('/view-cart')}>
+              BUY NOW!
+            </button>
+          </div>
         </div>
       ))}
     </div>
