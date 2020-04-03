@@ -21,20 +21,21 @@ export default function ProductsPage() {
     <Layout title="Available Apps">
     <div>
       {items.map(item => (
-        <div>
+        <div class="card" style={{ width: '20rem' }}>
           <div>
             <img
+            class="card-img-top"
               src={`/images/${item.sku}.png`}
               alt={item.name}
               width={50}
             />
           </div>
-          <div>{item.name}</div>
+          <div style={{ fontSize: '30px' }}>{item.name}</div>
           <div>{item.description}</div>
           <div>{formatPrice(item.price)}</div>
           <div>
           {/* NOT EXACTLY SURE WHAT TO PUT HERE ONCLICK */}
-            <button onClick={() => history.push('/view-cart')}>
+            <button type="button" class="btn btn-dark" onClick={() => history.push('/view-cart')}>
               BUY NOW!
             </button>
           </div>
