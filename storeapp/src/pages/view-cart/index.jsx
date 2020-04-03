@@ -10,7 +10,7 @@ export default function ViewCartPage() {
     <div>
       <CartProvider>
       <Navbar />
-      <Layout title="View Cart">
+      <Layout>
       <Store />
       {/* Use below and delete store if we can get save state working */}
       {/* <Cart stripeToken="pk_test_yNFG8EE1RMXpBQmCyWRlGDx400CddyVwyS"/> */}

@@ -8,7 +8,7 @@ import Store from "../../components/store";
 
 export default function MainPage() {
   return (
-    <div>
+    <div style={{ backgroundImage: '' }}>
     <Layout title="Welcome to Appquire">
       {/* <Store /> */}
       <div>

@@ -37,7 +37,7 @@ export default class Navbar extends Component {
             <Link to="/view-cart" className="ml">
                 <button className="btn btn-primary">
                     <i className="fas fa-cart-plus"></i>
-                    Cart 
+                    Buy Now 
                     {/* ({numItems}) */}
                 </button>
             </Link>
