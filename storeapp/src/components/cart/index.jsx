@@ -74,7 +74,7 @@ export default function Cart({ stripeToken }) {
 
           <tr>
             <td style={{ textAlign: "right" }} colSpan={4}>
-              <button onClick={checkout}>Checkout Now!</button>
+              <button className={"btn btn-outline-info"} onClick={checkout}>Checkout Now!</button>
             </td>
           </tr>
         </tbody>

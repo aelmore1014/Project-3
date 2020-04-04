@@ -40,7 +40,7 @@ export default class Filesupload extends Component {
             <div>
 
                 <input type="file" name="file" onChange={this.onChangeHandler} />
-                <button type="button" class="btn btn-success btn-block" onClick={this.onClickHandler}>Upload</button>
+                <button type="button" class="btn btn-info btn-block" onClick={this.onClickHandler}>Upload</button>
 
 
 
