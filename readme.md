@@ -10,7 +10,7 @@
 
 ## Preview
 
-![Gif of Project]()
+![Project](appquire.png)
 
 
 ## Introduction
