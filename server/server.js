@@ -5,12 +5,18 @@ const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session');
 const mongoose = require('mongoose');
 const App = require('./database/index');
+
+
 const multer = require('multer')
-mongoose.connect('mongodb://localhost/Appquire', { useNewUrlParser: true });
+
+mongoose.connect('mongodb://user:MernProject3@ds261296.mlab.com:61296/heroku_27wckknf', { useNewUrlParser: true });
 const db = mongoose.connection;
+
+
+
 const indexRouter = require("./routes/index")
 const config = require('./config/config.js');
-const port = 4000;
+const port = process.env.port || 4000;
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
@@ -19,6 +25,13 @@ app.use(cookieSession({ secret: "hello" }));
 app.use(cors());
 app.use(express.static("public"));
 app.use('/', indexRouter)
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+}
+
+
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, './')
@@ -26,9 +39,12 @@ const storage = multer.diskStorage({
     filename: function (req, file, cb) {
         cb(null, Date.now() + '-' + file.originalname)
     }
+
 })
 const upload = multer({ storage: storage }).single('file')
+
 app.post('/upload', function (req, res) {
+
     upload(req, res, function (err) {
         if (err instanceof multer.MulterError) {
             return res.status(500).json(err)
@@ -54,6 +70,8 @@ app.post('/saveapp', function (req, res) {
 app.listen(port, () => {
     db.on('error', console.error.bind(console, 'connection error:'));
     db.once('open', function () {
+
+
     });
     console.log(`server running on ${port}`);
 });

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+//there is a css file that I made. You can add your own style to it. It's not pretty to look at.
+
 export default class Filesupload extends Component {
 
 
