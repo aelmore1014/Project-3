@@ -4,7 +4,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import CartContext from "../cart/context";
-// import logo from '../logo.svg';
+import logo from '../logo.jpg';
 // import styled from 'style-component'
 
 
@@ -15,7 +15,7 @@ export default class Navbar extends Component {
         return (
         <nav className="navbar navbar-expand-sm bg-light navbar-dark px-sm-5">
             <Link to="/">
-                <img alt="Appquire" className="navbar-brand text-dark" />
+                <img src={logo} alt="Appquire" style={{height:"55px", width:"60px"}} className="navbar-brand text-dark" />
             </Link>
             
             {/* <ul className="navbar-nav align-items-center">
