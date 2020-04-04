@@ -36,7 +36,7 @@ export default function Store() {
           <div className={"bg-dark"}>{item.name}</div>
           <div className={"bg-dark"}>{formatPrice(item.price)}</div>
           <div className={"bg-dark"}>
-            <button onClick={() => cartCtx.addToCart(item)} onPress={() => history.push("/view-cart")}>
+            <button className={"btn btn-outline-info"} onClick={() => cartCtx.addToCart(item)} onPress={() => history.push("/view-cart")}>
               Add to cart
             </button>
           </div>
