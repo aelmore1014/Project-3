@@ -29,13 +29,13 @@ export default class Navbar extends Component {
             {/* </li>
             </ul> */}
             <Link to="/Filesupload" className="ml-auto mr-2">
-                <button className="btn btn-primary">
+                <button className="btn btn-info">
                     <i className="fas fa-cart-plus"></i>
                     Upload App
                 </button>
             </Link>
             <Link to="/view-cart" className="ml">
-                <button className="btn btn-primary">
+                <button className="btn btn-info">
                     <i className="fas fa-cart-plus"></i>
                     Cart 
                     {/* ({numItems}) */}
