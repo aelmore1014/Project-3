@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
+//this is for submitting your app name. It will have an alert pop up box.
 
 class NameForm extends React.Component {
     constructor(props) {
@@ -16,7 +17,7 @@ class NameForm extends React.Component {
     }
   
     handleSubmit(event) {
-      alert('A name was submitted: ' + this.state.value);
+      alert('Your App name was submitted: ' + this.state.value);
         event.preventDefault();
         let submit = { name: this.state.value }
         axios.post("http://localhost:4000/saveapp", submit)
@@ -24,10 +25,7 @@ class NameForm extends React.Component {
             console.log(res)
         })
     }
-   
-
-
-  
+     
     render() {
       return (
         <form onSubmit={this.handleSubmit}>

@@ -5,9 +5,15 @@ const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session');
 const mongoose = require('mongoose');
 const App = require('./database/index');
+
+
 const multer = require('multer')
+
 mongoose.connect('mongodb://localhost/Appquire', { useNewUrlParser: true });
 const db = mongoose.connection;
+
+
+
 const indexRouter = require("./routes/index")
 const config = require('./config/config.js');
 const port = 4000;
@@ -26,9 +32,12 @@ const storage = multer.diskStorage({
     filename: function (req, file, cb) {
         cb(null, Date.now() + '-' + file.originalname)
     }
+
 })
 const upload = multer({ storage: storage }).single('file')
+
 app.post('/upload', function (req, res) {
+
     upload(req, res, function (err) {
         if (err instanceof multer.MulterError) {
             return res.status(500).json(err)
@@ -54,6 +63,8 @@ app.post('/saveapp', function (req, res) {
 app.listen(port, () => {
     db.on('error', console.error.bind(console, 'connection error:'));
     db.once('open', function () {
+
+
     });
     console.log(`server running on ${port}`);
 });
