@@ -4,9 +4,12 @@ import CartProvider from "../../components/cart/context";
 import Store from "../../components/store";
 import Navbar from "../../components/navbar";
 import Layout from "../../components/layout";
+import { Router } from "react-router-dom";
+import history from "../../history";
 
 export default function ViewCartPage() {
   return (
+    <Router history={history}>
     <div>
       <CartProvider>
       <Navbar />
@@ -17,5 +20,6 @@ export default function ViewCartPage() {
       </Layout>
       </CartProvider>
     </div>
+    </Router>
   );
 }
