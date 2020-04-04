@@ -13,7 +13,7 @@ export default class Navbar extends Component {
     // const cartCtx = useContext(CartContext);
     // const numItems = cartCtx.items.count;
         return (
-        <nav className="navbar navbar-expand-sm bg-light navbar-dark px-sm-5">
+        <nav className="navbar navbar-expand-sm bg-white navbar-dark px-sm-5">
             <Link to="/">
                 <img src={logo} alt="Appquire" style={{height:"55px", width:"60px"}} className="navbar-brand text-dark" />
             </Link>
