@@ -7,7 +7,7 @@ import Layout from "../../components/layout";
 
 import Store from "../../components/store";
 
-import Store from "../../components/store";
+// import Store from "../../components/store";
 
 export default function MainPage() {
   return (
