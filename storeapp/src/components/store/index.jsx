@@ -18,19 +18,16 @@ export default function Store() {
   return (
     <div>
       {items.map(item => (
-        <div class="card" style={{ width: '20rem' }}>
+        <div>
           <div>
-            <img class="card-img-top"
+            <img
               src={`/images/${item.sku}.png`}
               alt={item.name}
               width={50}
             />
           </div>
-          <div  style={{ fontSize: '30px', textAlign: 'center' }}>{item.name}</div>
-          <div style={{ textAlign: 'center' }}>{item.description}</div>
-          <div style={{ textAlign: 'center' }}>Developer:  {item.seller}</div>
-          <div style={{ textAlign: 'center' }} class="text-success">Price:{formatPrice(item.price)}</div>
-          
+          <div>{item.name}</div>
+          <div>{formatPrice(item.price)}</div>
           <div>
             <button onClick={() => cartCtx.addToCart(item)}>
               Add to cart
