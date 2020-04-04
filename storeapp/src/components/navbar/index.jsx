@@ -3,7 +3,7 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import CartContext from "../cart/context";
+// import CartContext from "../cart/context";
 import logo from '../logo.jpg';
 // import styled from 'style-component'
 

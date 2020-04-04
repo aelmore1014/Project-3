@@ -10,7 +10,7 @@ import ViewCartPage from "./pages/view-cart";
 import Details from './components/Details';
 import Filesupload from './components/Filesupload';
 import history from "./history";
-import From from './component/Form'
+// import From from './component/Form'
 
 import CartProvider from "./components/cart/context";
 
