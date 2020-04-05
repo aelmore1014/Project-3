@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -16,7 +17,7 @@ const db = mongoose.connection;
 
 const indexRouter = require("./routes/index")
 const config = require('./config/config.js');
-const port = process.env.port || 4000;
+const port = process.env.PORT || 4000;
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json())
@@ -26,8 +27,14 @@ app.use(cors());
 app.use(express.static("public"));
 app.use('/', indexRouter)
 
+// Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
+    // Set static folder
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+
+    });
 }
 
 

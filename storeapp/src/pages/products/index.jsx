@@ -6,7 +6,7 @@ import Layout from "../../components/layout";
 // import { BrowserRouter, Switch, Route } from "react-router-dom";
 // import ProductsPage from "./pages/products";
 import history from "../../history";
-import { Row, Col } from 'react-simple-flex-grid';
+import { Col } from 'react-simple-flex-grid';
 import "react-simple-flex-grid/lib/main.css";
 // import { CartContext } from "../../components/cart/context";
 // import { useContext } from 'react';

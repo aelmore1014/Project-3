@@ -7,7 +7,7 @@ import items from "../../data/products";
 import { CartContext } from "../cart/context";
 import Cart from "../cart";
 import history from "../../history";
-import { Row, Col } from 'react-simple-flex-grid';
+import { Col } from 'react-simple-flex-grid';
 
 // SETS FORMAT FOR PRICE
 function formatPrice(price) {
