@@ -10,9 +10,15 @@ import ViewCartPage from "./pages/view-cart";
 import Details from './components/Details';
 import Filesupload from './components/Filesupload';
 import history from "./history";
+import "./assets/css/bootstrap.min.css";
+import "./assets/css/paper-kit.css";
+// import "./assets/css/paper-kit.min.css";
+// import "./assets/css/paper-kit.css.map";
+import "./assets/demo/demo.css";
 import From from './component/Form'
 
 import CartProvider from "./components/cart/context";
+import FormPage from "./pages/form";
 
 // Renders paths for pages
 ReactDOM.render(
@@ -25,7 +31,8 @@ ReactDOM.render(
       <Route exact path="/products" component={ProductsPage} />
       <Route exact path="/view-cart" component={ViewCartPage} />
       <Route exact path="/filesupload" component={Filesupload} />
-      <Route exact path="/details" component={Details} />
+        <Route exact path="/details" component={Details} />
+        <Route exact path="/form" component={FormPage} />
       </Switch>
     </CartProvider>
   </Router>,

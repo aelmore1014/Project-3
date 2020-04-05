@@ -5,6 +5,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import CartContext from "../cart/context";
 import logo from '../logo.jpg';
+// import Form from "../../component/Form";
+
 // import styled from 'style-component'
 
 
@@ -40,7 +42,10 @@ export default class Navbar extends Component {
                     Cart 
                     {/* ({numItems}) */}
                 </button>
-            </Link>
+                </Link>
+                <Link to= "/form"  className="nav-link text-dark">
+                Form
+                </Link>
             </nav>
         )
     }
