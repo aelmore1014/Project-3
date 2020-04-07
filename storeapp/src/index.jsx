@@ -16,6 +16,8 @@ import "./assets/css/paper-kit.css";
 // import "./assets/css/paper-kit.css.map";
 import "./assets/demo/demo.css";
 import From from './component/Form'
+import Contact from "./pages/contact";
+
 
 import CartProvider from "./components/cart/context";
 import FormPage from "./pages/form";
@@ -33,6 +35,8 @@ ReactDOM.render(
       <Route exact path="/filesupload" component={Filesupload} />
         <Route exact path="/details" component={Details} />
         <Route exact path="/form" component={FormPage} />
+        <Route exact path="/contact" component={Contact} />
+        
       </Switch>
     </CartProvider>
   </Router>,
