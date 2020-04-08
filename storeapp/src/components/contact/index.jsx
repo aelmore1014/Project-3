@@ -10,7 +10,8 @@ import {
 export default class Contact extends Component {
     render() {
         return (
-<div>
+            <div>
+                {/* See contact > index.jsx for form page. For some reason the component was not working correctly */}
             {/* <form>
                 <div className="form-row">
                     <FormGroup className="col-md-6">
