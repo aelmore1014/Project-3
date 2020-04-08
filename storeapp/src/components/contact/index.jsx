@@ -10,9 +10,8 @@ import {
 export default class Contact extends Component {
     render() {
         return (
-
-
-            <form>
+<div>
+            {/* <form>
                 <div className="form-row">
                     <FormGroup className="col-md-6">
                         <Label for="inputEmail4">Email</Label>
@@ -58,7 +57,8 @@ export default class Contact extends Component {
                     </Label>
                 </FormGroup>
                 <Button type="submit" color="primary">Sign in</Button>
-            </form>
-        );
-    };
+                </form> */}
+                </div>
+        )
+    }
 }
