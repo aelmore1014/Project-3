@@ -15,7 +15,7 @@ const db = mongoose.connection;
 
 
 
-const indexRouter = require("./routes/index")
+// const indexRouter = require("./routes/index")
 const config = require('./config/config.js');
 const port = process.env.PORT || 4000;
 const app = express();
@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(cookieSession({ secret: "hello" }));
 app.use(cors());
 app.use(express.static("public"));
-app.use('/', indexRouter)
+// app.use('/', indexRouter)
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
