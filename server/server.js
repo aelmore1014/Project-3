@@ -26,13 +26,13 @@ app.use(cookieSession({ secret: "hello" }));
 app.use(cors());
 app.use(express.static("public"));
 // app.use('/', indexRouter)
-
+app.use(express.static(path.join(__dirname, 'build'))) 
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
+    // app.use(express.static("client/build"));
     // Set static folder
     app.get('/', (req, res) => {
-        res.sendFile(path.resolve(__dirname,'../','storeapp', 'client', 'build', 'index.html'));
+        res.sendFile(path.join(__dirname, 'build', 'index.html')) 
 
     });
 }
