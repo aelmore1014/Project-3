@@ -4,7 +4,6 @@
   "description": "React App Store",
   "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build" ,
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd server && node server.js",
     "dev": "concurrently \"npm run start\" \"cd storeapp && npm start\"",
